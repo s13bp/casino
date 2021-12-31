@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
         <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
@@ -12,11 +12,18 @@
             crossorigin="anonymous">
         
         </script>
+      
     </head>
     <body>
+      
         <a-scene physics background="color: #ffffff">
+            <a-assets id="assets-id">
+                <video id="dynVid" autoplay loop="true" src="images/vidoz.mp4"> </video>
+
+
+            </a-assets>
           
-          
+            <a-video src= "#dynVid" width="7" height="3.5" autoplay loop="true" crossorigin="anonymous"  rotation="0 90 0" position="-9.4 2.3 0.4"  ></a-video>
              
             <!-- Sky -->
             <a-sky src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"></a-sky>
@@ -32,7 +39,6 @@
                 <a-box position="7 5 2" width="7" depth="0.1" height="4" src="images/kkk.png">
                 </a-box>
             </a-entity>
-              <a-video src= "images/vidoz.mp4" width="7" height="3.5" autoplay loop="true" crossorigin="anonymous" id="vid" rotation="0 90 0" position="-9.4 2.3 0.4"  ></a-video>
 
 
         </a-scene>
