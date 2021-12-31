@@ -9,6 +9,10 @@
     </head>
     <body>
         <a-scene physics background="color: #ffffff">
+            <a-assets>
+                <video id="sahib" autoplay loop="true" src="images/vidoz.mp4"></video>
+              </a-assets>
+              <a-video src="#sahib" width="7" height="3.5" rotation="0 90 0" position="-9.4 2.3 0.4"></a-video>
             <!-- Sky -->
             <a-sky src="https://img.freepik.com/free-photo/fantasy-sky_90839-278.jpg?size=626&ext=jpg"></a-sky>
             
@@ -16,7 +20,7 @@
                 <a-entity foo camera look-controls  wasd-controls="acceleration: 500" ></a-entity>
                 
             </a-entity>
-            <a-video src="images/vidoz.mp4" width="8" height="4.5" rotation="0 90 0" position="-9.4 2.3 0.4"></a-video>
+           
             <a-entity static-body gltf-model="images/lopo.glb" position="0 0 0" rotation="0 0 0">
             </a-entity>
             <a-entity position="-7 0 -2.5" rotation="0 0 0">
