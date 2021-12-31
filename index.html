@@ -15,18 +15,13 @@
     </head>
     <body>
         <a-scene physics background="color: #ffffff">
-            <a-assets>
-                <video id="sahib" autoplay loop="true"  class="backvid" src="images/vidoz.mp4"></video>
-              </a-assets>
-              <a-video src= "images/vidoz.mp4" width="7" height="3.5" rotation="0 90 0" position="-9.4 2.3 0.4"  ></a-video>
-              <script>
-                $(document).ready(function(){
-                      $(".backvid").show();
-                });
-                </script>
-             
+          
+            <a-video src= "images/vidoz.mp4" width="7" height="3.5"  crossorigin="anonymous" id="vid" rotation="0 90 0" position="-9.4 2.3 0.4"  ></a-video>
+            <script> 
+                document.getElementById('vid').play(); 
+            </script>   
             <!-- Sky -->
-            <a-sky src="https://img.freepik.com/free-photo/fantasy-sky_90839-278.jpg?size=626&ext=jpg"></a-sky>
+            <a-sky src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"></a-sky>
             
             <a-entity  position="0 1.6 10">
                 <a-entity foo camera look-controls  wasd-controls="acceleration: 500" ></a-entity>
