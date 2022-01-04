@@ -4,6 +4,7 @@
         <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
         <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
+        <script src="https://unpkg.com/aframe-animation-component@^4.0.0/dist/aframe-animation-component.min.js"></script>
         <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
         <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
         <script
@@ -17,9 +18,12 @@
     <body>
        
       
-        <a-scene physics background="color: #ffffff">
+        <a-scene physics>
+            <a-camera position="-1 0 10" rotation="0 -5 0" wasd-controls="acceleration: 100">
+                <a-cursor></a-cursor>
+            </a-camera>
            
-            <a-video src="images/vidoz.mp4"width="6" height="3.5" autoplay loop="true" crossorigin="anonymous"  rotation="0 90 0" position="-9.4 2.3 0.4"  ></a-video>
+            <a-video src="images/vidoz.mp4"width="6" height="3.5" autoplay loop="true" crossorigin="anonymous"  rotation="0 90 0" position="-9.4 2.3 1.4"  ></a-video>
             <script>
 
                 var copyVideo;
@@ -40,19 +44,34 @@
         
                 video.play();
                 </script>
-            <!-- Sky -->
-            <a-sky src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"></a-sky>
-            
-            <a-entity  position="0 1.6 10">
-                <a-entity foo camera look-controls  wasd-controls="acceleration: 500" ></a-entity>
+            <!-- Sky
+             <a-entity  position="0 1.6 10" height="47">
+                <a-entity foo camera look-controls  wasd-controls="acceleration: 100" ></a-entity>
                 
             </a-entity>
+            -->
+            <a-sky src="https://images.unsplash.com/photo-1593000904207-7e529d2bb019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"></a-sky>
+            
+           
            
             <a-entity static-body gltf-model="images/lopo.glb" position="0 0 0" rotation="0 0 0">
             </a-entity>
             <a-entity position="-7 0 -2.5" rotation="0 0 0">
                 <a-box position="7 5 2" width="7" depth="0.1" height="4" src="images/kkk.png">
                 </a-box>
+            </a-entity>
+            <a-entity position=" 6 4 4 " scale="5 5 10"  rotation="0 330 0" text="value:\n Hey there MetaHuman,\nwelcome to the MetaVegaX Lounge !!\nPS Its still under construction...\nMove round with W A S D keys and mouse;
+            color: #212121;
+            align: center;
+            wrapCount:20;
+            width: 1;
+            font:https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/raleway/Raleway-Black.json;
+            shader: msdf"
+            geometry="primitive:plane; widht:auto; height:auto"
+            material="color: #969191; shader: flat; visible:true"
+            event-set__enter="_event: mouseenter; text.color: #FF0000"
+            event-set__leave="_event: mouseleave; text.color: #212121" >
+
             </a-entity>
 
 
