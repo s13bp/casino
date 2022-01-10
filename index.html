@@ -44,6 +44,27 @@
         
                 video.play();
                 </script>
+
+            <a-video src="images/vidoz2.mp4"width="5" height="3.5" autoplay loop="true" crossorigin="anonymous"  rotation="0 90 0" position="-31.4 2.3 -6.0"  ></a-video>
+            <script>
+
+                var copyVideo;
+                var video = document.createElement("video");
+                video.src = "images/vidoz.mp4";
+                video.crossOrigin = "*";
+                video.volume = 0; // sample video has bad audio
+                video.addEventListener("playing", function() {
+                copyVideo = true;
+                }, true);aaaaaaaaaaaaaaaaaaaa
+                video.currentTime = 0;
+                video.play();
+                }, true);
+                video.addEventListener("error", function() {
+                console.log("could not play video");
+                }, true);
+
+                video.play();
+                </script>
             <!-- Sky
              <a-entity  position="0 1.6 10" height="47">
                 <a-entity foo camera look-controls  wasd-controls="acceleration: 100" ></a-entity>
